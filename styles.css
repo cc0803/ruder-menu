@@ -28,16 +28,14 @@ button {
 }
 
 .rudder-menu {
-	transition: all 0.5s;
 	position: fixed;
 	bottom: 60px;
 	transform: translate(50%, 50%);
 	right: 50%;
-	background-color: aquamarine;
-	border-radius: 30px;
 }
 
 ul {
+	transition: all 0.5s ease-out;
 	background-color: aquamarine;
 	display: flex;
 	justify-content: space-evenly;
@@ -53,7 +51,6 @@ ul {
 
 li i {
 	font-size: 25px;
-	width: 50px;
 }
 
 li .fa-plus {
@@ -67,14 +64,9 @@ li .fa-plus {
 	transform: rotate(405deg);
 }
 
-.invisible {
+#invisible {
 	width: 0;
 	opacity: 0;
 	z-index: -1;
-}
-
-.visible {
-	width: 80vw;
-	opacity: 1;
-	z-index: 4;
+	font-size: 0;
 }

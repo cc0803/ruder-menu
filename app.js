@@ -1,16 +1,18 @@
 const menuButton = document.querySelector(".menu-button");
-const rudderMenu = document.querySelector(".rudder-menu");
 const closeButton = document.querySelector(".close");
 const menuButtonIcon = document.querySelector(".menu-button i");
 const list = document.querySelector("ul");
+const listIcons = Array.from(document.querySelectorAll("li i"));
 
 menuButton.addEventListener("click", () => {
 	menuButtonIcon.classList.add("rotate");
-	rudderMenu.classList.remove("invisible");
-	rudderMenu.classList.add("visible");
+	list.removeAttribute("id", "invisible");
+	listIcons.forEach((icon) => {
+		icon.removeAttribute("id", "invisible");
+	});
 	setTimeout(() => {
-		list.classList.remove("invisible");
-		list.classList.add("visible");
-		menuButton.classList.add("invisible");
+		menuButton.setAttribute("id", "invisible");
 	}, 500);
 });
+
+closeButton.addEventListener("click", () => {});
