@@ -64,9 +64,17 @@ li .fa-plus {
 	transform: rotate(405deg);
 }
 
+.menu-button i {
+	transition: all 0.5s cubic-bezier(0.42, 0, 0.51, 1.32);
+}
+
 #invisible {
 	width: 0;
 	opacity: 0;
 	z-index: -1;
 	font-size: 0;
+}
+
+.z-index-shift {
+	z-index: -1;
 }
